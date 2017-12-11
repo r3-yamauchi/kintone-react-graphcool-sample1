@@ -1,0 +1,9 @@
+{
+  "presets": [
+    "react", "stage-0", ["es2015", { "modules": false }]
+  ],
+  "plugins": [
+    "babel-plugin-transform-flow-strip-types",
+    "transform-class-properties"
+  ]
+}

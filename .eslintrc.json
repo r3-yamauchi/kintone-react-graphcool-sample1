@@ -1,0 +1,51 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["eslint-config-kintone", "plugin:flowtype/recommended"],
+  "plugins": [
+    "flowtype", "react"
+  ],
+  "env": {
+    // browser グローバル変数を使用する
+    "browser": true
+  },
+  "rules": {
+    "indent": ["off", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["warn", "double"],
+    "semi": ["error", "always"],
+    "space-before-function-paren": ["off", "always"],
+    "no-multi-spaces": ["error", {"exceptions": {"Property": true, "ImportDeclaration": true, "VariableDeclarator": true, "AssignmentExpression": true}}],
+    "no-trailing-spaces": "warn",
+    "no-console": "warn",
+    "curly": ["warn", "all"],
+    "strict": "warn",
+
+    "no-undefined": "warn",
+    "no-unused-vars": ["warn", {"vars": "all", "args": "after-used"}],
+    "no-undef-init": "warn",
+    "no-undef": "warn",
+
+    "import/named": 2,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prefer-stateless-function": 0,
+    "react/prop-types": [2, { "ignore": ["dispatch"] }],
+    "react/sort-comp": [2, {
+      "order": [
+        "type-annotations",
+        "static-methods",
+        "lifecycle",
+        "/^on.+$/",
+        "everything-else",
+        "rendering"
+      ],
+      "groups": {
+        "rendering": [
+          "/^render.+$/",
+          "render"
+        ]
+      }
+    }]
+
+  }
+}
